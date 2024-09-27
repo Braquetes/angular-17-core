@@ -24,4 +24,4 @@ Base template for Angular 17 applications, featuring essential tools and configu
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/angular-17-base.git
+   git clone https://github.com/Braquetes/angular-17-core.git
