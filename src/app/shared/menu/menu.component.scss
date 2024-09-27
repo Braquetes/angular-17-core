@@ -5,6 +5,8 @@
     justify-content: center;
     align-items: center;
     max-height: 48px;
+    background-color: #9b2347;
+    color: white;
 }
 
 .fill-space {
@@ -152,7 +154,7 @@
     }
 
     mat-icon {
-        color: rgba(0, 0, 0, .8);
+        color: rgba(0, 0, 0, .9);
     }
 }
 

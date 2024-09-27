@@ -36,11 +36,6 @@
 								"input": "@angular/material/prebuilt-themes/purple-green.css",
 								"inject": false,
 								"bundleName": "light-theme"
-							},
-              {
-								"input": "@angular/material/prebuilt-themes/pink-bluegrey.css",
-								"inject": false,
-								"bundleName": "medium-theme"
 							}
             ],
             "scripts": [],
