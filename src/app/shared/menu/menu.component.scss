@@ -1,0 +1,266 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 48px;
+}
+
+.fill-space {
+    flex-grow: 1;
+}
+
+.mat-sidenav {
+    max-width: 40vh;
+}
+
+.custom-header {
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+.img-menu {
+    max-width: 250px;
+    max-height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.main-content {
+    padding: 10px 10px 10px 10px;
+}
+
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 0;
+    user-select: none;
+}
+
+.profile-image-select {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 500;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    user-select: none;
+}
+
+.profile-card {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.profile-name {
+    font-size: 16px;
+    user-select: none;
+}
+
+.profile-rol {
+    font-size: 12px;
+    user-select: none;
+}
+
+.profile-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+}
+
+.profile-setting {
+    margin-left: 70px;
+}
+
+.profile-setting:hover {
+    background-color: #cccccc;
+}
+
+.profile-logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.profile-logout:hover {
+    background-color: #cccccc;
+}
+
+.logout-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logout-container h4 {
+    margin: 0;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.logout-container mat-icon {
+    font-size: 24px;
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 40px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.card-header {
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    width: 95%;
+}
+
+.card-body:hover {
+    cursor: pointer;
+}
+
+.card-header-select {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modulo:hover {
+    mat-list-item {
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+    mat-icon {
+        color: rgba(0, 0, 0, .8);
+    }
+}
+
+.nav-item {
+    height: fit-content;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-dialog {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1;
+}
+
+.card-dialog .card-header-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-dialog .profile-data {
+    display: flex;
+    align-items: center;
+}
+
+.card-dialog .profile-image-select {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.card-dialog #profile-text {
+    flex-grow: 1;
+}
+
+.card-dialog .profile-setting {
+    margin-left: auto;
+}
+
+.card-dialog .profile-logout {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-dialog .profile-logout h4 {
+    margin-left: 10px;
+}
+
+.folder-item {
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.folder-item:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.dark mat-icon {
+    color: black !important;
+}
+
+.light mat-icon {
+    color: white !important;
+}
+
+
+//
+
+.modulo {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    font-size: 2vh;
+    display: block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.divider {
+    font-size: 1.5vh;
+}
+
+
+// 
+.header-icon {
+    padding: 8px;
+}

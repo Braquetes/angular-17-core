@@ -1,0 +1,96 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav mode="over" #sidenav position="start" class="side-scroll">
+        <mat-toolbar class="custom-header" align="center" routerLink="/">
+            <img [src]="image" alt="logo" width="60%">
+        </mat-toolbar>
+
+        <ng-container>
+            <mat-list style="padding-left: 8px;">
+                @for (item of menu; track item) {
+                <mat-list-item class="folder-item" [routerLink]="item.route" (click)="this.sidenav.close();"
+                    [ngClass]="{'dark': styleManager.dark, 'light': !styleManager.dark}">
+                    <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+                    <div matListItemTitle>{{item.name}}</div>
+                </mat-list-item>
+                }
+                <mat-divider></mat-divider>
+            </mat-list>
+        </ng-container>
+
+        <ng-container>
+            <mat-accordion (openedChange)="onAccordionChange($event)">
+                <ng-container *ngFor="let header of routes">
+                    <mat-expansion-panel class="menu" [expanded]="expandedPanel === header">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>{{header.name}}</mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ng-container *ngFor="let route of header.routes">
+                            <div *ngIf="route.title">
+                                <div class="divider">{{route.title}}</div>
+                                <mat-divider></mat-divider>
+                            </div>
+                            <mat-nav-list *appAccess="route" class="modulo">
+                                <mat-list-item routerLink="{{ route.route }}" (click)="this.sidenav.close();">
+                                    <mat-icon matListItemIcon>{{ route.icon }}</mat-icon>
+                                    <div matListItemTitle class="option">{{ route.name }}</div>
+                                </mat-list-item>
+                            </mat-nav-list>
+                        </ng-container>
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-accordion>
+        </ng-container>
+
+
+    </mat-sidenav>
+
+    <mat-sidenav-content class="body">
+        <mat-toolbar color="accent">
+            <button mat-icon-button (click)="sidenav.toggle(); onClick()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class="toolbar-spacer"></span>
+            <button mat-icon-button (click)="toggleDarkTheme()" *ngIf="this.styleManager.dark">
+                <mat-icon matListItemIcon>light_mode</mat-icon>
+            </button>
+            <button mat-icon-button (click)="toggleDarkTheme()" *ngIf="!this.styleManager.dark">
+                <mat-icon matListItemIcon>dark_mode</mat-icon>
+            </button>
+            <span class="fill-space"></span>
+            <mat-card class="card-body" (click)="changeStatusElement()">
+                <mat-card-header class="card-header">
+                    <div mat-card-avatar class="profile-image" [style.backgroundColor]="primaryColor"
+                        [style.color]="secondaryColor">
+                        {{initialsLetters}}
+                    </div>
+                </mat-card-header>
+            </mat-card>
+        </mat-toolbar>
+        <div class="main-content" (click)="onClick()">
+            <router-outlet></router-outlet>
+        </div>
+        <mat-card class="card-dialog" *ngIf="profileStatus">
+            <mat-card-header class="card-header-select">
+                <div class="profile-data">
+                    <div mat-card-avatar class="profile-image-select" [style.backgroundColor]="primaryColor"
+                        [style.color]="secondaryColor">
+                        {{initialsLetters}}
+                    </div>
+                    <div id="profile-text">
+                        <h4 class="profile-name">{{fullName}}</h4>
+                        <h6 class="profile-rol">{{rol}}</h6>
+                    </div>
+                </div>
+                <button mat-stroked-button class="profile-setting" (click)="settings()">Ajustes de usuario</button>
+            </mat-card-header>
+            <mat-card-actions class="profile-logout" (click)="signOut()">
+                <div class="logout-container">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <h4>Cerrar sesión</h4>
+                </div>
+            </mat-card-actions>
+
+        </mat-card>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

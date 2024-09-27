@@ -1,0 +1,13 @@
+<div class="x">
+  <div class="container">
+    <div class="container-img">
+      <!-- <img align="center" src="assets/img/logo.png" alt="logo xd" class="img"> -->
+      <h1>{{ info.titulo }}</h1>
+    </div>
+    <div class="information">
+      <h1 align="center">{{ info.message }}</h1>
+      <br>
+      <p>{{ dayOfWeek | uppercase }}, {{ currentDate | date:'dd' }} DE {{ month | uppercase }} DEL {{ currentDate |
+        date:'yyyy' }}</p>
+    </div>
+  </div>

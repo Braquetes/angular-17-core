@@ -1,0 +1,33 @@
+<!-- <nav>
+    <h1 class="titulo">Authentication</h1>
+</nav> -->
+
+<div class="login-container">
+    <mat-card class="card-form mat-elevation-z3">
+        <form autocomplete="off" [formGroup]="loginForm" (ngSubmit)="login()">
+            <h2 class="form-title">Iniciar Sesión</h2>
+            <mat-card-content class="card-content">
+                <mat-error class="error" *ngIf="error">{{message}}</mat-error>
+                <mat-form-field appearance="fill">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput formControlName="username" autofocus>
+                    <mat-icon matSuffix>person</mat-icon>
+                    <mat-error *ngIf="loginForm.get('username')?.hasError('required')">Es necesario ingresar el usuario</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <button type="button" mat-icon-button matSuffix (click)="changeHide($event)">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Requiere ingresar la contraseña</mat-error>
+                </mat-form-field>
+                <mat-card-actions class="card-actions">
+                    <button mat-stroked-button (click)="login()" (keyup.enter)="login()" [disabled]="loginForm.invalid" class="accent w-100">
+                        Iniciar sesión
+                    </button>
+                </mat-card-actions>
+            </mat-card-content>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,20 @@
+<mat-card class="profile-card">
+    <div class="profile-container">
+        <div class="profile-image-container">
+            <img class="profile-image" src="assets/img/messiento.jpg" alt="Profile Image">
+        </div>
+        <div class="profile-info-container">
+            <h2>{{ user.fullName }}</h2>
+            <p><strong>Nombre:</strong> {{ user.firstName }}</p>
+            <p><strong>Apellido Paterno:</strong> {{ user.lastNamePaterno }}</p>
+            <p><strong>Apellido Materno:</strong> {{ user.lastNameMaterno }}</p>
+            <p><strong>Usuario:</strong> {{ user.username }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Tipo de Usuario:</strong> {{ user.userType }}</p>
+            <div class="profile-actions">
+                <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="accent">Accent</button>
+            </div>
+        </div>
+    </div>
+</mat-card>
