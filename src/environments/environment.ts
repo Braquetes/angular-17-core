@@ -4,11 +4,20 @@
 
 export const environment = {
   production: false,
-  gateway: 'http://localhost:8000',
+  // gateway: 'http://localhost:8000',
+  gateway: 'https://api.az0.biz',
   authenticate: 'http://localhost:8000',
+  // authenticate: 'https://apiauth.az0.biz',
   files: '',
   LOCAL_STORAGE: 'token',
-  firebase: {}
+  firebase: {
+    apiKey: "AIzaSyDtg3CkN2hYzXpXLKYXzVI7ntzyMVyCcgQ",
+    authDomain: "sapopan.firebaseapp.com",
+    projectId: "sapopan",
+    storageBucket: "sapopan.appspot.com",
+    messagingSenderId: "232573747410",
+    appId: "1:232573747410:web:8421ea9132d153c2bbad0b"
+  }
 };
 
 /*

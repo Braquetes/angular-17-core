@@ -1,32 +1,10 @@
 export var views: any = [
     {
-        name: "CORRESPONDENCIA EXTERNA",
+        name: "SUBMENU DEMO",
         routes: [
             {
-                name: "NUEVO DOCUMENTO",
-                route: "/finanzas",
-                icon: "description",
-                expand: true
-            }
-        ]
-    },
-    {
-        name: "FICHAS INFORMATIVAS",
-        routes: [
-            {
-                name: "NUEVA FICHA",
-                route: "/finanzas",
-                icon: "description",
-                expand: true
-            }
-        ]
-    },
-    {
-        name: "CORRESPONDENCIA INTERNA",
-        routes: [
-            {
-                name: "NUEVO DOCUMENTO",
-                route: "./nuevo-documento-interno",
+                name: "DEMO 1",
+                route: "./demo1",
                 icon: "description",
                 expand: true
             }

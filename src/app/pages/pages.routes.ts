@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { DemoComponent } from './demo/demo.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DemoComponent } from '../modules/module/pages/demo/demo.component';
 
 export const pagesRoutes: Routes = [
     {

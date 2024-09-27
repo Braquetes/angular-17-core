@@ -1,12 +1,17 @@
 import { Routes } from '@angular/router';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { SideMenuComponent } from '../../pages/side-menu/side-menu.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { DemoComponent } from './pages/demo/demo.component';
 
 export const moduleRoutes: Routes = [
   {
     path: '',
     component: SideMenuComponent,
     children: [
+      {
+        path: 'demo1',
+        component: DemoComponent
+      },
       {
         path: 'welcome',
         component: WelcomeComponent

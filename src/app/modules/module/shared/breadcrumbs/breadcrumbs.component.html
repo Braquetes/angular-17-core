@@ -1,0 +1,17 @@
+<nav>
+    <ul>
+        <li>
+            <a [routerLink]="['../'.repeat(options.length)]">Inicio</a>
+            <span *ngIf="options.length > 0">&nbsp;&nbsp;&nbsp;/</span>
+        </li>
+        <li *ngFor="let item of options; let i = index; let isLast = last">
+            <ng-container *ngIf="!isLast; else lastBreadcrumb">
+                <a [routerLink]="['../'.repeat(options.length - i - 1)]">{{ item.path }}</a>
+            </ng-container>
+            <ng-template #lastBreadcrumb>
+                <a routerLink=".">{{ item.path }}</a>
+            </ng-template>
+            <span *ngIf="!isLast">&nbsp;&nbsp;&nbsp;/</span>
+        </li>
+    </ul>
+</nav>

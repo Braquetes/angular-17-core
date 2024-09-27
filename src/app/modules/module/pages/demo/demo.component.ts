@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MaterialComponentsModule } from '../../shared/material/material-components.module';
+import { MaterialComponentsModule } from '../../../../shared/material/material-components.module';
 
 @Component({
   selector: 'app-demo',

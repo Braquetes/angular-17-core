@@ -9,7 +9,6 @@ interface UserProfile {
   fullName: string;
   username: string;
   email: string;
-  userType: string;
 }
 
 @Component({
@@ -28,7 +27,6 @@ export class ProfileComponent implements OnInit {
     fullName: '',
     username: '',
     email: '',
-    userType: ''
   };
 
   constructor(

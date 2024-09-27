@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { InfoComponent } from '../../../shared/info/info.component';
-import { info } from '../core/models/info';
+import { InfoComponent } from '../../../../shared/info/info.component';
+import { info } from '../../core/models/info';
 
 @Component({
   selector: 'app-welcome',
